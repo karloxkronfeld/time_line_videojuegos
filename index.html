@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Timeline Global - Historia de los Videojuegos</title>
+<title>Timeline Global - Con Carro</title>
 <style>
   body {
     background: #ffffff;
@@ -33,20 +33,29 @@
   }
   a { color:#0077cc; text-decoration:none; font-weight:600; }
 
-  /* 🚗 Animación del carro */
+  /* 🚗 Carro animado */
   .car {
     position: fixed;
-    bottom: 5px;
-    left: -50px; /* comienza fuera de la pantalla */
+    bottom: 8px; /* Ajusta si quieres más abajo */
+    left: -150px;
     width: 120px;
-    animation: drive 25s linear infinite;
+    animation: zigzag 20s linear infinite;
     z-index: 10;
   }
 
-  /* Recorrido del carro */
-  @keyframes drive {
-    0% { left: -150px; }
-    100% { left: 100vw; }
+  /* Movimiento irregular (avanza, retrocede un poco, sigue) */
+  @keyframes zigzag {
+    0%   { left: -150px; }
+    10%  { left: 10vw; }
+    20%  { left: 7vw; }
+    30%  { left: 20vw; }
+    40%  { left: 17vw; }
+    50%  { left: 35vw; }
+    60%  { left: 32vw; }
+    70%  { left: 50vw; }
+    80%  { left: 48vw; }
+    90%  { left: 65vw; }
+    100% { left: 62vw; }
   }
 </style>
 </head>
@@ -55,13 +64,10 @@
     <a href="colombia.html">Siguiente →</a>
   </div>
 
-  <!-- Tu imagen principal -->
   <img class="timeline" src="Diseño sin título.png" alt="Timeline global de los videojuegos">
 
   <!-- 🚗 Imagen del carro -->
   <img class="car" src="carro.png" alt="Carrito">
 </body>
 </html>
-
- 
 
