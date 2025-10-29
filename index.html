@@ -11,12 +11,15 @@
     overflow-x: auto;
     overflow-y: hidden;
     white-space: nowrap;
+    position: relative;
   }
-  img {
+  img.timeline {
     height: 100vh;
     width: auto;
     display: inline-block;
   }
+
+  /* Botón siguiente */
   .topbar {
     position: fixed;
     right: 12px;
@@ -29,6 +32,22 @@
     font-family: sans-serif;
   }
   a { color:#0077cc; text-decoration:none; font-weight:600; }
+
+  /* 🚗 Animación del carro */
+  .car {
+    position: fixed;
+    bottom: 40px;
+    left: -150px; /* comienza fuera de la pantalla */
+    width: 120px;
+    animation: drive 25s linear infinite;
+    z-index: 10;
+  }
+
+  /* Recorrido del carro */
+  @keyframes drive {
+    0% { left: -150px; }
+    100% { left: 100vw; }
+  }
 </style>
 </head>
 <body>
@@ -36,9 +55,12 @@
     <a href="colombia.html">Siguiente →</a>
   </div>
 
-  <img src="Diseño sin título.png" alt="Timeline historia de los videojuegos">
+  <!-- Tu imagen principal -->
+  <img class="timeline" src="Diseño sin título.png" alt="Timeline global de los videojuegos">
+
+  <!-- 🚗 Imagen del carro -->
+  <img class="car" src="carro.png" alt="Carrito">
 </body>
 </html>
 
-
-
+ 
