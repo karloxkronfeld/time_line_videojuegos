@@ -3,23 +3,23 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Timeline Global - Carros en movimiento continuo</title>
+<title>Timeline Global - Historia de los Videojuegos</title>
 <style>
   body {
-    background: #fff;
+    background: #ffffff;
     margin: 0;
     overflow-x: auto;
     overflow-y: hidden;
     white-space: nowrap;
     position: relative;
   }
-
   img.timeline {
     height: 100vh;
     width: auto;
     display: inline-block;
   }
 
+  /* Botón siguiente */
   .topbar {
     position: fixed;
     right: 12px;
@@ -31,55 +31,22 @@
     box-shadow: 0 2px 8px rgba(0,0,0,0.12);
     font-family: sans-serif;
   }
-
   a { color:#0077cc; text-decoration:none; font-weight:600; }
 
-  /* 🚗 Estilos base para todos los vehículos */
+  /* 🚗 Animación del carro */
   .car {
     position: fixed;
-    bottom: -20px; /* más abajo */
-    width: 100px;
-    transform: scaleX(1);
+    bottom: 40px;
+    left: -150px; /* comienza fuera de la pantalla */
+    width: 120px;
+    animation: drive 25s linear infinite;
     z-index: 10;
   }
 
-  /* Animación de avance infinito */
+  /* Recorrido del carro */
   @keyframes drive {
     0% { left: -150px; }
-    100% { left: 110vw; } /* atraviesa la pantalla */
-  }
-
-  /* Varias velocidades */
-  .car1 {
-    animation: drive 18s linear infinite;
-  }
-  .car2 {
-    animation: drive 25s linear infinite;
-    bottom: -10px;
-    width: 120px;
-    opacity: 0.9;
-  }
-  .car3 {
-    animation: drive 35s linear infinite;
-    bottom: -30px;
-    width: 80px;
-    opacity: 0.8;
-  }
-
-  /* Pequeña variación de inicio (para que no salgan juntos) */
-  .car1 { animation-delay: 0s; }
-  .car2 { animation-delay: 5s; }
-  .car3 { animation-delay: 10s; }
-
-  /* Carretera opcional */
-  .road {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 60px;
-    background: linear-gradient(to bottom, #666 0%, #333 100%);
-    z-index: 5;
+    100% { left: 100vw; }
   }
 </style>
 </head>
@@ -88,17 +55,12 @@
     <a href="colombia.html">Siguiente →</a>
   </div>
 
+  <!-- Tu imagen principal -->
   <img class="timeline" src="Diseño sin título.png" alt="Timeline global de los videojuegos">
 
-  <!-- 🚧 carretera -->
-  <div class="road"></div>
-
-  <!-- 🚗 vehículos -->
-  <img class="car car1" src="carro.png" alt="carro 1">
-  <img class="car car2" src="carro.png" alt="carro 2">
-  <img class="car car3" src="carro.png" alt="carro 3">
+  <!-- 🚗 Imagen del carro -->
+  <img class="car" src="carro.png" alt="Carrito">
 </body>
 </html>
-
 
 
