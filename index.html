@@ -35,7 +35,7 @@
   /* 🚗 Carro */
   .car {
     position: fixed;
-    bottom: 5px; /* un poco más abajo */
+    bottom: 0px; /* un poco más abajo */
     left: -150px;
     width: 120px;
     z-index: 10;
@@ -45,16 +45,16 @@
 
   @keyframes zigzag {
     0%   { left: -150px; transform: scaleX(1); }
-    10%  { left: 15vw; transform: scaleX(1); }   /* avanza más */
-    20%  { left: 5vw;  transform: scaleX(-1); }  /* retrocede más */
-    30%  { left: 30vw; transform: scaleX(1); }   /* avanza más lejos */
-    40%  { left: 12vw; transform: scaleX(-1); }  /* retrocede más largo */
-    50%  { left: 45vw; transform: scaleX(1); }
-    60%  { left: 25vw; transform: scaleX(-1); }
-    70%  { left: 60vw; transform: scaleX(1); }
-    80%  { left: 40vw; transform: scaleX(-1); }
-    90%  { left: 75vw; transform: scaleX(1); }
-    100% { left: 55vw; transform: scaleX(-1); }  /* termina retrocediendo */
+    10%  { left: 150vw; transform: scaleX(1); }   /* avanza más */
+    20%  { left: 300vw;  transform: scaleX(-1); }  /* retrocede más */
+    30%  { left: 600vw; transform: scaleX(1); }   /* avanza más lejos */
+    40%  { left: 700vw; transform: scaleX(-1); }  /* retrocede más largo */
+    50%  { left: 800vw; transform: scaleX(1); }
+    60%  { left: 900vw; transform: scaleX(-1); }
+    70%  { left: 1000vw; transform: scaleX(1); }
+    80%  { left: 1111vw; transform: scaleX(-1); }
+    90%  { left: 1444vw; transform: scaleX(1); }
+    100% { left: 2222vw; transform: scaleX(-1); }  /* termina retrocediendo */
   }
 </style>
 </head>
@@ -69,6 +69,7 @@
   <img class="car" src="carro.png" alt="Carrito animado">
 </body>
 </html>
+
 
 
 
