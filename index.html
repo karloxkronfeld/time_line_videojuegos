@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Timeline Global - Con Carro</title>
+<title>Timeline Global - Con Carro Realista</title>
 <style>
   body {
-    background: #ffffff;
+    background: #fff;
     margin: 0;
     overflow-x: auto;
     overflow-y: hidden;
@@ -19,7 +19,6 @@
     display: inline-block;
   }
 
-  /* Botón siguiente */
   .topbar {
     position: fixed;
     right: 12px;
@@ -33,29 +32,29 @@
   }
   a { color:#0077cc; text-decoration:none; font-weight:600; }
 
-  /* 🚗 Carro animado */
+  /* 🚗 Carro */
   .car {
     position: fixed;
-    bottom: 8px; /* Ajusta si quieres más abajo */
+    bottom: 25px; /* un poco más abajo */
     left: -150px;
     width: 120px;
-    animation: zigzag 20s linear infinite;
     z-index: 10;
+    animation: zigzag 25s linear infinite;
+    transform-origin: center;
   }
 
-  /* Movimiento irregular (avanza, retrocede un poco, sigue) */
   @keyframes zigzag {
-    0%   { left: -150px; }
-    10%  { left: 10vw; }
-    20%  { left: 7vw; }
-    30%  { left: 20vw; }
-    40%  { left: 17vw; }
-    50%  { left: 35vw; }
-    60%  { left: 32vw; }
-    70%  { left: 50vw; }
-    80%  { left: 48vw; }
-    90%  { left: 65vw; }
-    100% { left: 62vw; }
+    0%   { left: -150px; transform: scaleX(1); }
+    10%  { left: 10vw; transform: scaleX(1); }
+    20%  { left: 7vw; transform: scaleX(-1); }
+    30%  { left: 20vw; transform: scaleX(1); }
+    40%  { left: 17vw; transform: scaleX(-1); }
+    50%  { left: 35vw; transform: scaleX(1); }
+    60%  { left: 32vw; transform: scaleX(-1); }
+    70%  { left: 50vw; transform: scaleX(1); }
+    80%  { left: 48vw; transform: scaleX(-1); }
+    90%  { left: 65vw; transform: scaleX(1); }
+    100% { left: 62vw; transform: scaleX(-1); }
   }
 </style>
 </head>
@@ -64,10 +63,9 @@
     <a href="colombia.html">Siguiente →</a>
   </div>
 
-  <img class="timeline" src="Diseño sin título.png" alt="Timeline global de los videojuegos">
+  <img class="timeline" src="Diseño sin titulo.png" alt="Timeline global de los videojuegos">
 
   <!-- 🚗 Imagen del carro -->
-  <img class="car" src="carro.png" alt="Carrito">
+  <img class="car" src="carro.png" alt="Carrito animado">
 </body>
 </html>
-
