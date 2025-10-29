@@ -43,18 +43,19 @@
     transform-origin: center;
   }
 
+  /* Movimiento irregular (avanza, retrocede un poco, sigue) */
   @keyframes zigzag {
-    0%   { left: -150px; transform: scaleX(1); }
-    10%  { left: 10vw; transform: scaleX(1); }
-    20%  { left: 7vw; transform: scaleX(-1); }
-    30%  { left: 20vw; transform: scaleX(1); }
-    40%  { left: 17vw; transform: scaleX(-1); }
-    50%  { left: 35vw; transform: scaleX(1); }
-    60%  { left: 32vw; transform: scaleX(-1); }
-    70%  { left: 50vw; transform: scaleX(1); }
-    80%  { left: 48vw; transform: scaleX(-1); }
-    90%  { left: 65vw; transform: scaleX(1); }
-    100% { left: 62vw; transform: scaleX(-1); }
+    0%   { left: -150px; }
+    10%  { left: 10vw; }
+    20%  { left: 7vw; }
+    30%  { left: 20vw; }
+    40%  { left: 17vw; }
+    50%  { left: 35vw; }
+    60%  { left: 32vw; }
+    70%  { left: 50vw; }
+    80%  { left: 48vw; }
+    90%  { left: 65vw; }
+    100% { left: 62vw; }
   }
 </style>
 </head>
@@ -69,4 +70,5 @@
   <img class="car" src="carro.png" alt="Carrito animado">
 </body>
 </html>
+
 
