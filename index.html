@@ -36,17 +36,26 @@
   /* 🚗 Animación del carro */
   .car {
     position: fixed;
-    bottom: -25px;
-    left: -150px; /* comienza fuera de la pantalla */
-    width: 120px;
-    animation: drive 25s linear infinite;
+    bottom: 8vh;             /* un poco más arriba del borde inferior */
+    left: -150px;            /* comienza fuera de la pantalla */
+    width: 100px;
+    animation: drive 20s linear infinite;
     z-index: 10;
   }
 
   /* Recorrido del carro */
   @keyframes drive {
     0% { left: -150px; }
-    100% { left: 100vw; }
+    100% { left: 110vw; }
+  }
+
+  /* 📱 Ajuste para móviles */
+  @media (max-width: 768px) {
+    .car {
+      width: 70px;
+      bottom: 12vh;
+      animation-duration: 15s; /* va un poco más rápido */
+    }
   }
 </style>
 </head>
@@ -55,13 +64,10 @@
     <a href="colombia.html">Siguiente →</a>
   </div>
 
-  <!-- Tu imagen principal -->
+  <!-- Imagen principal -->
   <img class="timeline" src="Diseño sin título.png" alt="Timeline global de los videojuegos">
 
   <!-- 🚗 Imagen del carro -->
   <img class="car" src="carro.png" alt="Carrito">
 </body>
 </html>
-
-
-
